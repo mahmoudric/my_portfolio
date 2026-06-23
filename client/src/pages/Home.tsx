@@ -107,6 +107,7 @@ export default function Home() {
                   variant="outline" 
                   className="border-accent text-accent hover:bg-accent/10"
                   size="lg"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Get in Touch
                 </Button>
@@ -121,6 +122,7 @@ export default function Home() {
                   src="/manus-storage/profile-photo_09e0b5be.png"
                   alt="Profile"
                   className="relative w-full rounded-lg shadow-2xl object-cover aspect-square"
+                  style={{ transform: 'scaleX(-1)' }}
                 />
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/10 rounded-full blur-2xl" />
               </div>
@@ -326,7 +328,7 @@ export default function Home() {
                 GitHub
               </a>
               <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-colors">
-                Dribbble
+                
               </a>
             </div>
 
