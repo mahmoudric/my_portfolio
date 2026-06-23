@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Heart, Star, Filter, Grid, List, Search, ChevronDown, X } from "lucide-react";
+import { Link } from "wouter";
 
 /**
  * E-Commerce Platform Redesign - Interactive Demo
@@ -337,13 +338,23 @@ export default function EcommercePlatform() {
                       </div>
 
                       {/* Add to Cart */}
+                  <div className="space-y-2">
+                    <Link href={`/projects/ecommerce/product/${product.id}`}>
                       <Button
-                        onClick={() => addToCart(product)}
-                        className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                        className="w-full bg-secondary hover:bg-secondary/80 text-foreground"
                         size="sm"
                       >
-                        Add to Cart
+                        View Details
                       </Button>
+                    </Link>
+                    <Button
+                      onClick={() => addToCart(product)}
+                      className="w-full bg-accent hover:bg-accent/90 text-accent-foreground"
+                      size="sm"
+                    >
+                      Add to Cart
+                    </Button>
+                  </div>
                     </div>
                   </div>
                 ))}
@@ -396,6 +407,15 @@ export default function EcommercePlatform() {
                             </span>
                           )}
                         </div>
+                      <div className="flex gap-2">
+                        <Link href={`/projects/ecommerce/product/${product.id}`} className="flex-1">
+                          <Button
+                            className="w-full bg-secondary hover:bg-secondary/80 text-foreground"
+                            size="sm"
+                          >
+                            View Details
+                          </Button>
+                        </Link>
                         <Button
                           onClick={() => addToCart(product)}
                           className="bg-accent hover:bg-accent/90 text-accent-foreground"
@@ -403,6 +423,7 @@ export default function EcommercePlatform() {
                         >
                           Add to Cart
                         </Button>
+                      </div>
                       </div>
                     </div>
                   </div>
