@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import EcommercePlatform from "./pages/EcommercePlatform";
 import ProductDetail from "./pages/ProductDetail";
+import SaasDashboard from "./pages/SaasDashboard";
 
 
 function Router() {
@@ -15,6 +16,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/projects/ecommerce"} component={EcommercePlatform} />
       <Route path="/projects/ecommerce/product/:id" component={ProductDetail} />
+      <Route path="/projects/saas-dashboard" component={SaasDashboard} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

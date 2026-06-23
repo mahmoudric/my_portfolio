@@ -223,7 +223,16 @@ export default function Home() {
                         </Button>
                       </a>
                     )}
-                    {project.id !== 1 && (
+                    {project.id === 2 ? (
+                      <a href="/projects/saas-dashboard">
+                        <Button
+                          variant="ghost"
+                          className="text-accent hover:text-accent hover:bg-accent/10"
+                        >
+                          View Project <ExternalLink className="ml-2 w-4 h-4" />
+                        </Button>
+                      </a>
+                    ) : project.id !== 1 && (
                       <Button 
                         variant="ghost"
                         className="text-accent hover:text-accent hover:bg-accent/10"
