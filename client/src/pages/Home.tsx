@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Palette, Zap, Mail, ExternalLink } from "lucide-react";
 import { useState } from "react";
+import { useLocation } from "wouter";
 
 /**
  * Design Philosophy: Minimalist Elegance with Asymmetric Layout
@@ -212,12 +213,24 @@ export default function Home() {
                   <div className="flex items-center gap-4 pt-4">
                     <span className="text-sm text-muted-foreground">{project.year}</span>
                     <div className="flex-1 h-px bg-border" />
-                    <Button 
-                      variant="ghost"
-                      className="text-accent hover:text-accent hover:bg-accent/10"
-                    >
-                      View Project <ExternalLink className="ml-2 w-4 h-4" />
-                    </Button>
+                    {project.id === 1 && (
+                      <a href="/projects/ecommerce">
+                        <Button 
+                          variant="ghost"
+                          className="text-accent hover:text-accent hover:bg-accent/10"
+                        >
+                          View Project <ExternalLink className="ml-2 w-4 h-4" />
+                        </Button>
+                      </a>
+                    )}
+                    {project.id !== 1 && (
+                      <Button 
+                        variant="ghost"
+                        className="text-accent hover:text-accent hover:bg-accent/10"
+                      >
+                        View Project <ExternalLink className="ml-2 w-4 h-4" />
+                      </Button>
+                    )}
                   </div>
                 </div>
               </div>
