@@ -319,13 +319,13 @@ export default function Home() {
             </div>
             
             <div className="flex gap-8">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-colors">
+              <a href="https://x.com/_mahmoudyasen" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-colors">
                 Twitter
               </a>
               <a href="https://www.linkedin.com/in/mahmoud-yasen-713a23346" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-colors">
                 LinkedIn
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-colors">
+              <a href="https://github.com/mahmoudric" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-colors">
                 GitHub
               </a>
               <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-accent transition-colors">
